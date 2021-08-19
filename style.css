@@ -7,7 +7,8 @@ body {
     position: relative;
 }
 .container {
-    width: 100%
+    width: 100%;
+    display: grid;
 }
 .col {
     width: 50%;
@@ -154,7 +155,13 @@ input[ type="submit"]:hover{
     margin-left: auto;
     
 }
-
+@media (min-width: 900px) {
+    .col {
+         grid-template-columns: repeat(1, 1fr);
+         width: 50%;
+         text-align: center;
+        }
+  }
 @media only screen and (max-width: 600px) {
     .caption {
        font-size: 10px;
